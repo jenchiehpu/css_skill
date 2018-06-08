@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a {
+            background-color: #f00;
+            text-align: center;
+        }
+
+        .b {
+            background-color: #ccc;
+            text-align: center;
+        }
+
+        .c {
+            background-color: #00f;
+            text-align: center;
+        }
+
+        .d {
+            background-color: pink;
+            text-align: center;
+        }
+
+        @media screen and (max-width:799px) {
+            .box {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .a {
+                order: 1;
+                width: 50%;
+            }
+            .b {
+                order: 4;
+                width: 100%;
+            }
+            .c {
+                order: 3;
+                width: 100%;
+            }
+            .d {
+                order: 2;
+                width: 50%;
+            }
+        }
+
+        @media screen and (min-width:800px) {
+
+            .a {
+                float: left;
+                width: 30%;
+                height: 400px;
+            }
+
+            .b {
+                float: left;
+                width: 70%;
+                height: 200px;
+            }
+
+            .c {
+                float: left;
+                height: 200px;
+                width: 35%;
+            }
+
+            .d {
+                float: left;
+                height: 200px;
+                width: 35%;
+            }
+        }
+
+        @media screen and (max-width:799px) {}
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="a">
+            <h1>A</h1>
+        </div>
+        <div class="b">
+            <h1>B</h1>
+        </div>
+        <div class="c">
+            <h1>C</h1>
+        </div>
+        <div class="d">
+            <h1>D</h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
