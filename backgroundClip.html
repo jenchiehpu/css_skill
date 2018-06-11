@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1000px;
+            height: 500px;
+            color: transparent;
+            font-size: 150px;
+            font-weight: bold;
+            line-height: 400px;
+            text-align: center;
+            background: url(simpson.jpg);
+            background-size: contain;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        SIMPSON
+    </div>
+    <input type="text" placeholder="請輸入文字">
+    <button id="btn">送出</button>
+    <script>
+        var div = document.getElementsByTagName("div")[0];
+        var btn = document.getElementById("btn");
+        var input = document.getElementsByTagName("input")[0];
+        btn.onclick = function () {
+            div.innerHTML = input.value;
+        }
+    </script>
+</body>
+
+</html>

@@ -26,15 +26,27 @@
             opacity: 0.4;
         }
 
+        .noOpacity:before {
+            width: 3px;
+            height: 100%;
+            position: absolute;
+            content: "";
+            display: inline-block;
+            background-color: #f00;
+            top: 0;
+            right: 0;
+        }
+
         .noOpacity:after {
             content: "";
             display: inline-block;
             position: absolute;
             bottom: 0;
             right: 0;
-            border: 6px solid transparent;
-            border-right-color: #000;
-            border-bottom-color: #000;
+
+            border: 10px solid transparent;
+            border-right-color: #f00;
+            border-bottom-color: #f00;
             cursor: ew-resize;
         }
 
@@ -55,6 +67,7 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
