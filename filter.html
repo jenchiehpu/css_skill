@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .item {
+            position: relative;
+        }
+
+        .noOpacity {
+            resize: horizontal;
+            max-width: 500px;
+            width: 50px;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .opacity img {
+            opacity: 0.4;
+        }
+
+        .noOpacity:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: 6px solid transparent;
+            border-right-color: #000;
+            border-bottom-color: #000;
+            cursor: ew-resize;
+        }
+
+        img {
+            width: 500px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div class="opacity">
+            <img src="food.jpg" alt="">
+        </div>
+        <div class="noOpacity">
+            <img src="food.jpg" alt="">
+        </div>
+
+    </div>
+</body>
+
+</html>
