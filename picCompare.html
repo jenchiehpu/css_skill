@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 80%;
+            margin: 50px;
+        }
+
+        img {
+            width: 561px;
+            vertical-align: bottom;
+        }
+
+        .hoverDiv {
+            width: 561px;
+            overflow: hidden;
+        }
+
+        .hoverDiv img {
+            width: 100%;
+        }
+
+
+
+        .second {
+            display: none;
+        }
+
+        .hoverDiv:hover .second {
+            display: block;
+        }
+
+        .hoverDiv:hover .first {
+            display: none;
+        }
+
+        .slide {
+            position: relative;
+            height: 680px;
+        }
+
+        .slideAfter {
+            width: 40px;
+            max-width: 561px;
+            resize: horizontal;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .slideAfter:after {
+            content: "";
+            display: inline-block;
+            border: 8px solid #f00;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            cursor: ew-resize
+        }
+
+        .slideAfter:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #f00;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>並列</h1>
+        <img src="first.png" alt="">
+        <img src="second.png" alt="">
+
+        <h2>hover比較</h2>
+        <div class="hoverDiv">
+            <img src="second.png" alt="" class="second">
+            <img src="first.png" alt="" class="first">
+        </div>
+
+        <h2>resize比較</h2>
+        <div class="slide">
+
+            <div>
+                <img src="first.png" alt="">
+            </div>
+            <div class="slideAfter">
+                <img src="second.png" alt="" class="imgAfter">
+            </div>
+        </div>
+        <p>移動上方紅色正方形 可展開圖片</p>
+</body>
+
+</html>
