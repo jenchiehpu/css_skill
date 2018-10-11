@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            /* outline: 1px solid #f00; */
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .list_item {
+            margin-top: 10px;
+        }
+        .list_item>li:first-child {
+            border-top: 1px solid #ccc;
+        }
+
+        .list_item>li {
+            max-width: 600px;
+            padding: 10px 10px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .list_item a {
+            display: flex;
+            /* border:1px solid #f00; */
+        }
+
+        .list_item .list_item_pic {
+            /* width: 100px; */
+            flex: 1 0 100px;
+            object-fit: contain;
+        }
+
+        .list_item .list_item_desc {
+            /* width: 180px; */
+            flex: 2 1 180px;
+            margin-left: 12px;
+
+        }
+
+        .list_item .list_item_desc h3 {
+            margin-top: 6px;
+            line-height: 1.2em;
+            height: 2.4em;
+            overflow: hidden;
+        }
+
+        .list_item .list_item_desc p,
+        .list_item .list_item_desc span {
+            margin-top: 6px;
+            line-height: 1.2em;
+            height: 1.2em;
+            overflow: hidden;
+        }
+
+        .list_item .list_item_desc span {
+            display: inline-block;
+        }
+        .date {
+            margin-left: 10px;
+        }
+        .date:before{
+            content:'.';
+            display: inline-block;
+
+        }
+        footer {
+            margin-top: 10px;
+            background-color: #000;
+            color:#fff;
+        }
+        footer p {
+            text-align: center;
+            padding: 20px;
+        }
+        header{
+            height: 50px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <ul class='list_item'>
+        <li>
+            <a href="#">
+                <img class='list_item_pic' src="https://api.fnkr.net/testimg/120x100/00CED1/FFF/?text=img+placeholder">
+                <div class='list_item_desc'>
+                    <h3>標題標題標題標題標題標題標題標題標題</h3>
+                    <p>內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文內文</p>
+                    <span class='from'>中時電子報</span><span class='date'>2018/10/11</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class='list_item_pic' src="https://api.fnkr.net/testimg/120x100/00CED1/FFF/?text=img+placeholder">
+                <div class='list_item_desc'>
+                    <h3>標題</h3>
+                    <p>內文內文</p>
+                    <span>中時電子報</span><span>2018/10/11</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class='list_item_pic' src="https://api.fnkr.net/testimg/120x100/00CED1/FFF/?text=img+placeholder">
+                <div class='list_item_desc'>
+                    <h3>標題</h3>
+                    <p>內文內文</p>
+                    <span>中時電子報</span><span>2018/10/11</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img class='list_item_pic' src="https://api.fnkr.net/testimg/120x100/00CED1/FFF/?text=img+placeholder">
+                <div class='list_item_desc'>
+                    <h3>標題</h3>
+                    <p>內文內文</p>
+                    <span>中時電子報</span><span>2018/10/11</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <footer>
+        <p>©2018 - xxxxxxxxxxxxx</p>
+    </footer>
+</body>
+
+</html>

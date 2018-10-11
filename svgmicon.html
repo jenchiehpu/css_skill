@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    li {
+        padding: 10px 12px 10px 24px;
+        height: 1.2em;
+        position: relative;
+    }
+    li span {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1.2em;
+        height: 1.2em;
+        /* background-color: #ccc; */
+    }
+    *{
+        /* outline:1px solid #f00; */
+    }
+    svg {
+        /* position: absolute;
+        left:24px;
+        top:12px; */
+        /* display: inline-block; */
+        vertical-align: middle;
+        padding-bottom: 2px;
+        margin-right: 8px;
+    }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><span>小米</span></li>
+        <li><span>iphone</span></li>
+        <li><span>蘋果</span></li>
+        <li><span>oppo</span></li>
+        <li><span>聲寶</span></li>
+        <li><span>冷氣機</span></li>
+        <li><span>冰箱</span></li>
+        <li><span>qwerty</span></li>
+        <li><span>aaaa</span></li>
+        <li><span>QWCVPLK</span></li>
+
+    </ul>
+    <script>
+
+    function createMiconSearchSvg() {
+        var svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+        svg.setAttribute('class','micon_search_btn');
+        svg.setAttribute('xmlns','http://www.w3.org/2000/svg');
+        svg.setAttribute('xmlns:svg','http://www.w3.org/2000/svg');
+        svg.setAttribute('height','16');
+        svg.setAttribute('width','16');
+        svg.setAttribute('viewBox','0,0,25,25');
+        var svg_g = document.createElementNS('http://www.w3.org/2000/svg','g'),
+            svg_circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+            svg_line = document.createElementNS('http://www.w3.org/2000/svg','line');
+            svg_ellipse = document.createElementNS('http://www.w3.org/2000/svg','ellipse');
+
+        svg_circle.setAttribute('fill','#ababab');
+        svg_circle.setAttribute('stroke','#ababab');
+        svg_circle.setAttribute('stroke-width','3');
+        svg_circle.setAttribute('fill-opacity','0');
+        svg_circle.setAttribute('cx','10.5');
+        svg_circle.setAttribute('cy','10.5');
+        svg_circle.setAttribute('r','9');
+
+        svg_line.setAttribute('fill','none');
+        svg_line.setAttribute('stroke','#ababab');
+        svg_line.setAttribute('stroke-width','4');
+        svg_line.setAttribute('stroke-dasharray','null');
+        svg_line.setAttribute('stroke-linejoin','null');
+        svg_line.setAttribute('stroke-linecap','null');
+        svg_line.setAttribute('fill-opacity','0');
+        svg_line.setAttribute('x1','17');
+        svg_line.setAttribute('y1','17');
+        svg_line.setAttribute('x2','23');
+        svg_line.setAttribute('y2','23');
+
+        svg_ellipse.setAttribute('fill','#ababab');
+        svg_ellipse.setAttribute('stroke','#ababab');
+        svg_ellipse.setAttribute('stroke-width','2');
+        svg_ellipse.setAttribute('stroke-dasharray','null');
+        svg_ellipse.setAttribute('stroke-linejoin','null');
+        svg_ellipse.setAttribute('stroke-linecap','null');
+        svg_ellipse.setAttribute('cx','23');
+        svg_ellipse.setAttribute('cy','23');
+        svg_ellipse.setAttribute('rx','1');
+        svg_ellipse.setAttribute('ry','0.5');
+        svg_ellipse.setAttribute('transform','rotate(-45 23.000000000000004,23)');
+
+        svg_g.appendChild(svg_circle);
+        svg_g.appendChild(svg_line);
+        svg_g.appendChild(svg_ellipse);
+        svg.appendChild(svg_g);
+        return svg;
+    }
+    var oLi = document.getElementsByTagName('li');
+    var oSpan = document.getElementsByTagName('span');
+    for(var i = 0; i < oLi.length; i++){
+        oLi[i].insertBefore(createMiconSearchSvg(),oSpan[i]);
+    }
+    </script>
+</body>
+</html>
